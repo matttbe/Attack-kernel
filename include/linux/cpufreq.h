@@ -387,7 +387,9 @@ extern struct cpufreq_governor cpufreq_gov_ondemandplus;
 #elif defined(CONFIG_CPU_FREQ_DEFAULT_GOV_INTELLIMM)
 extern struct cpufreq_governor cpufreq_gov_intellimm;
 #define CPUFREQ_DEFAULT_GOVERNOR        (&cpufreq_gov_intellimm)
->>>>>>> 4705efa... cpufreq_intellimm: intelliminmax cpu governor initial baseline commit
+#elif defined(CONFIG_CPU_FREQ_DEFAULT_GOV_PEGASUSQ)
+extern struct cpufreq_governor cpufreq_gov_pegasusq;
+#define CPUFREQ_DEFAULT_GOVERNOR        (&cpufreq_gov_pegasusq)
 #endif
 
 
