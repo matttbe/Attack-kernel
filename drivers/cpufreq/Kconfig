@@ -147,6 +147,12 @@ config CPU_FREQ_DEFAULT_GOV_PEGASUSQ
 	help
 	  Use the CPUFreq governor 'pegasusq' as default.
 
+config CPU_FREQ_DEFAULT_GOV_SMARTASSH3
+	bool "smartassH3"
+	select CPU_FREQ_GOV_SMARTASSH3
+ 	help
+	  Use the CPUFreq governor 'smartassH3' as default.
+
 endchoice
 
 config CPU_FREQ_GOV_PERFORMANCE
@@ -240,6 +246,14 @@ config CPU_FREQ_GOV_INTERACTIVE
 	  module will be called cpufreq_interactive.
 
 	  For details, take a look at linux/Documentation/cpu-freq.
+
+	  If in doubt, say N.
+
+config CPU_FREQ_GOV_SMARTASSH3
+	tristate "'smartassH3' cpufreq governor"
+ 	depends on CPU_FREQ
+ 	help
+	  'smartassH3' - a "smart" governor
 
 	  If in doubt, say N.
 
